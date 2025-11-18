@@ -1,60 +1,67 @@
+/* --- Estilos generales --- */
 body {
-  background: #222;
-  color: white;
+  background: #0c0c0c;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-.calculadora {
-  background: #333;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-#display {
-  width: 100%;
-  height: 60px;
-  font-size: 24px;
+/* --- Pantalla de la calculadora --- */
+#pantalla {
+  width: 220px;
+  height: 50px;
+  font-size: 30px;
   text-align: right;
+  padding: 10px;
   margin-bottom: 15px;
   border: none;
+  background: #1b1b1b;
+  color: #00ffea;
   border-radius: 10px;
-  padding: 10px;
-  background: #111;
-  color: white;
+  outline: none;
+  box-shadow: inset 0 0 10px #00eaff66;
 }
 
-.botones {
+/* --- Contenedor de botones --- */
+.botones, body > button {
   display: grid;
-  grid-template-columns: repeat(4, 70px);
+  grid-template-columns: repeat(4, 55px);
   gap: 10px;
-  justify-content: center;
 }
 
+/* --- Botones --- */
 button {
-  height: 60px;
+  padding: 15px;
   font-size: 20px;
+  background: #2d2d2d;
   border: none;
   border-radius: 10px;
-  background: #555;
   color: white;
   cursor: pointer;
   transition: 0.2s;
 }
 
+/* Efecto al pasar el mouse */
 button:hover {
-  background: #777;
+  background: #00c9b8;
+  transform: scale(1.05);
 }
 
-.igual {
-  grid-column: span 4;
-  background: #00b894;
+/* Botón de igual */
+button:last-of-type {
+  background: #0099ff;
+  color: white;
 }
 
-.igual:hover {
-  background: #00cec9;
+/* Efecto al hacer click */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Botón C (borrar) */
+button:nth-child(3) {
+  background: #ff3b3b;
 }

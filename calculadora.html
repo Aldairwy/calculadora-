@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Básica</title>
+  <title>Calculadora</title>
   <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
 
-  <div class="calculadora">
-    <form>
-      <input type="text" id="display" readonly>
+  <div class="contenedor">
+    <input type="text" id="pantalla" readonly>
 
-      <div class="botones">
-        <button type="button" onclick="agregar('7')">7</button>
-        <button type="button" onclick="agregar('8')">8</button>
-        <button type="button" onclick="agregar('9')">9</button>
-        <button type="button" onclick="agregar('/')">÷</button>
+    <div class="botones">
+      <button onclick="enviar('7')">7</button>
+      <button onclick="enviar('8')">8</button>
+      <button onclick="enviar('9')">9</button>
+      <button onclick="enviar('/')">÷</button>
 
-        <button type="button" onclick="agregar('4')">4</button>
-        <button type="button" onclick="agregar('5')">5</button>
-        <button type="button" onclick="agregar('6')">6</button>
-        <button type="button" onclick="agregar('*')">×</button>
+      <button onclick="enviar('4')">4</button>
+      <button onclick="enviar('5')">5</button>
+      <button onclick="enviar('6')">6</button>
+      <button onclick="enviar('*')">×</button>
 
-        <button type="button" onclick="agregar('1')">1</button>
-        <button type="button" onclick="agregar('2')">2</button>
-        <button type="button" onclick="agregar('3')">3</button>
-        <button type="button" onclick="agregar('-')">−</button>
+      <button onclick="enviar('1')">1</button>
+      <button onclick="enviar('2')">2</button>
+      <button onclick="enviar('3')">3</button>
+      <button onclick="enviar('-')">-</button>
 
-        <button type="button" onclick="agregar('0')">0</button>
-        <button type="button" onclick="agregar('.')">.</button>
-        <button type="button" onclick="borrar()">C</button>
-        <button type="button" onclick="agregar('+')">+</button>
+      <button onclick="enviar('0')">0</button>
+      <button onclick="enviar('.')">.</button>
+      <button onclick="borrar()">C</button>
+      <button onclick="enviar('+')">+</button>
+    </div>
 
-        <button type="button" class="igual" onclick="calcular()">=</button>
-      </div>
-    </form>
+    <button class="igual" onclick="calcular()">=</button>
   </div>
 
   <script src="calculadora.js"></script>

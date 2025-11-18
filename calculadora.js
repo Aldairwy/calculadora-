@@ -1,17 +1,17 @@
-let display = document.getElementById('display');
+let input = document.getElementById("pantalla");
 
-function agregar(valor) {
-  display.value += valor;
+function enviar(num) {
+  input.value += num;
 }
 
 function borrar() {
-  display.value = '';
+  input.value = "";
 }
 
 function calcular() {
   try {
-    display.value = eval(display.value);
+    input.value = eval(input.value);
   } catch {
-    display.value = 'Error';
+    input.value = "Error";
   }
 }
